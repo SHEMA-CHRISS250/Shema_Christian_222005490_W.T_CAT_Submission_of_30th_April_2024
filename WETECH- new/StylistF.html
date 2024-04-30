@@ -1,0 +1,162 @@
+<!--Shema_Christian_222005490-->
+<!--Group One-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Management</title>
+    <style>
+        body {
+            background-color: lightskyblue; /* Background color */
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+            background-color: #fff; /* Background color for table data */
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="password"],
+        input[type="submit"],
+        input[type="reset"] {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+            width: calc(100% - 18px); /* Adjust width to fit within table cell */
+        }
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <h2>Stylist Form</h2>
+    <form action="submit_stylist.php" method="post" id="stylistForm">
+        <table>
+            <tr>
+                <td>
+                    <div class="form-group">
+                        <label for="first_name">First Name:</label>
+                        <input type="text" id="first_name" name="FirstName" required>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="form-group">
+                        <label for="last_name">Last Name:</label>
+                        <input type="text" id="last_name" name="LastName" required>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="form-group">
+                        <label for="phone_number">Phone Number:</label>
+                        <input type="tel" id="phone_number" name="PhoneNumber" required>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="Email" required>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <input type="submit" value="Submit">
+        <input type="reset" value="Clear"> <!-- Add clear button -->
+    </form>
+
+   <h2>Update Stylist Form</h2>
+<form action="update_stylist.php" method="post" id="updateForm">
+    <table>
+        <tr>
+            <td>
+                <div class="form-group">
+                    <label for="stylist_id">Stylist ID:</label>
+                    <input type="text" id="stylist_id" name="StylistID" required>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="form-group">
+                    <label for="first_name_update">First Name:</label>
+                    <input type="text" id="first_name_update" name="first_name" required>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="form-group">
+                    <label for="last_name_update">Last Name:</label>
+                    <input type="text" id="last_name_update" name="last_name" required>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="form-group">
+                    <label for="phone_number_update">Phone Number:</label>
+                    <input type="tel" id="phone_number_update" name="phone_number" required>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="form-group">
+                    <label for="email_update">Email:</label>
+                    <input type="email" id="email_update" name="email" required>
+                </div>
+            </td>
+        </tr>
+    </table>
+    <input type="submit" value="Update">
+    <input type="reset" value="Clear">
+</form>
+
+
+    <h2>Delete Stylist</h2>
+    <form action="delete_stylist.php" method="post" class="delete-form">
+        <table>
+            <tr>
+                <td>
+                    <div class="form-group">
+                        <label for="stylist_id_delete">Stylist ID:</label>
+                        <input type="text" id="stylist_id_delete" name="stylist_id_delete" required>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <input type="submit" value="Delete">
+        <input type="reset" value="Clear"> <!-- Add clear button -->
+    </form>
+</div>
+</body>
+</html>

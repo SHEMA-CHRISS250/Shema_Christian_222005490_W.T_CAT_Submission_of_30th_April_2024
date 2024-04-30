@@ -1,0 +1,159 @@
+<!--Shema_Christian_222005490-->
+<!--Group One-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Management</title>
+    <style>
+        body {
+            background-color: lightskyblue; /* Background color */
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+            background-color: #fff; /* Background color for table data */
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="password"],
+        input[type="submit"],
+        input[type="reset"] {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+            width: calc(100% - 18px); /* Adjust width to fit within table cell */
+        }
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Payment Form</h2>
+
+<form action="submit_payment.php" method="post" id="paymentForm">
+    <table>
+        <tr>
+            <td>
+                <div class="form-group">
+                    <label for="transaction_date">Transaction Date:</label>
+                    <input type="date" id="transaction_date" name="TransactionDate" required>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="form-group">
+                    <label for="amount_paid">Amount Paid:</label>
+                    <input type="text" id="amount_paid" name="AmountPaid" required>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="form-group">
+                    <label for="payment_method">Payment Method:</label>
+                    <input type="text" id="payment_method" name="PaymentMethod" required>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="form-group">
+                    <label for="customer_id">Customer ID:</label>
+                    <input type="text" id="customer_id" name="CustomerID" required>
+                </div>
+            </td>
+        </tr>
+    </table>
+    <input type="submit" value="Submit">
+    <input type="reset" value="Clear"> <!-- Add clear button -->
+</form>
+
+               
+
+    <h2>Update Payment Form</h2>
+<form action="update_payment.php" method="post" id="updatePaymentForm">
+    <table>
+        <tr>
+            <td>
+                <div class="form-group">
+                    <label for="payment_id">Payment ID:</label>
+                    <input type="text" id="payment_id" name="payment_id" required>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="form-group">
+                    <label for="transaction_date_update">Transaction Date:</label>
+                    <input type="date" id="transaction_date_update" name="TransactionDate" required>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="form-group">
+                    <label for="amount_paid_update">Amount Paid:</label>
+                    <input type="text" id="amount_paid_update" name="AmountPaid" required>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="form-group">
+                    <label for="payment_method_update">Payment Method:</label>
+                    <input type="text" id="payment_method_update" name="PaymentMethod" required>
+                </div>
+            </td>
+        </tr>
+    </table>
+    <input type="submit" value="Update">
+    <input type="reset" value="Clear"> <!-- Add clear button -->
+</form>
+<h2>Delete Payment</h2>
+<form action="delete_payment.php" method="post" class="delete-form">
+    <table>
+        <tr>
+            <td>
+                <div class="form-group">
+                    <label for="payment_id_delete">Payment ID:</label>
+                    <input type="text" id="payment_id_delete" name="payment_id_delete" required>
+                </div>
+            </td>
+        </tr>
+    </table>
+    <input type="submit" value="Delete">
+    <input type="reset" value="Clear"> <!-- Add clear button -->
+</form>
+</div>
+</body>
+</html>
+<!--Shema_Christian_222005490-->
+<!--Group One-->
+

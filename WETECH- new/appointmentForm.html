@@ -1,0 +1,124 @@
+<!--Shema_Christian_222005490-->
+<!--Group One-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment Form</title>
+    <style>
+        /* Add your CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('images/cool.jpeg'); /* Set background image */
+            background-size: cover;
+            background-position: center;
+        }
+        .container {
+            background-color: rgba(255, 255, 255, 0.8); /* Transparent white background */
+            border-radius: 10px;
+            padding: 20px;
+            margin: 0 auto;
+            max-width: 600px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Box shadow for form */
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        input[type="text"],
+        input[type="date"],
+        input[type="time"],
+        input[type="email"],
+        input[type="tel"],
+        select,
+        textarea {
+            width: calc(100% - 22px); /* Adjust the width of the inputs */
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        textarea {
+            height: 100px;
+        }
+        input[type="submit"],
+        .back-button,
+        .clear-button {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-right: 10px;
+            margin-bottom: 10px; /* Add margin bottom to create space between buttons */
+        }
+        input[type="submit"]:hover,
+        .back-button:hover,
+        .clear-button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 style="text-align: center;">Appointment Form</h2>
+        <form action="submit_appointment.php" method="post">
+            <label for="fullname">Full Name:</label>
+            <input type="text" id="fullname" name="fullname" required><br>
+            
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required><br>
+            
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required><br>
+            
+            <label for="date">Appointment Date:</label>
+            <input type="date" id="date" name="date" required><br>
+            
+            <label for="time">Appointment Time:</label>
+            <input type="time" id="time" name="time" required><br>
+            
+            <label for="service">Selected Service:</label>
+            <select id="service" name="service" required>
+                <option value="" disabled selected>Select Service</option>
+                <option value="Haircut">Haircut</option>
+                <option value="Shave">Shave</option>
+                <option value="Beard Trim">Beard Trim</option>
+            </select><br>
+            
+            <label for="stylist">Stylist Full Name, Phone Number, Email:</label>
+            <select id="stylist" name="stylist" required>
+                <option value="" disabled selected>Select Stylist</option>
+                <?php
+                // Database connection
+               
+
+                // Populate dropdown with stylist options
+                while ($row = $result->fetch_assoc()) {
+                    // Format the option text to display Full Name, Phone Number, and Email
+                    $option_text = $row['Full_Name'] . " - Phone: " . $row['Phone_Number'] . " - Email: " . $row['Email'];
+                    echo "<option value='" . $row['StylistID'] . "'>" . $option_text . "</option>";
+                }
+
+                $conn->close();
+                ?>
+            </select><br>
+            
+            <label for="notes">Additional Requests/Notes:</label>
+            <textarea id="notes" name="notes" rows="4" cols="50" placeholder="Please let us know if you have any specific requests or preferences for your appointment. For example, any particular hairstyle you'd like, or if you have sensitive skin and require special care during the shave."></textarea><br>
+            
+            <input type="submit" value="Submit">
+            <button class="clear-button" type="reset">Clear</button>
+        </form>
+        <button class="back-button" onclick="window.location.href='index.html'">Back</button>
+    </div>
+</body>
+</html>
+<!--Shema_Christian_222005490-->
+<!--Group One-->

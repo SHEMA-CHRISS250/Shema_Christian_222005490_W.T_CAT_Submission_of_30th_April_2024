@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supplier Management</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"],
+        input[type="reset"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover,
+        input[type="reset"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Supplier Form</h2>
+    <form action="submit_supplier.php" method="post">
+        <div class="form-group">
+            <label for="first_name">First Name:</label>
+            <input type="text" id="first_name" name="first_name" required>
+        </div>
+        <div class="form-group">
+            <label for="last_name">Last Name:</label>
+            <input type="text" id="last_name" name="last_name" required>
+        </div>
+        <div class="form-group">
+            <label for="quantity">Quantity:</label>
+            <input type="text" id="quantity" name="quantity" required>
+        </div>
+        <div class="form-group">
+            <label for="phone_number">Phone Number:</label>
+            <input type="tel" id="phone_number" name="phone_number" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <input type="submit" value="Submit">
+        <input type="reset" value="Clear">
+    </form>
+
+    <h2>Update Supplier Form</h2>
+    <form action="update_supplier.php" method="post">
+        <div class="form-group">
+            <label for="supplier_id_update">Supplier ID:</label>
+            <input type="text" id="supplier_id_update" name="supplier_id_update" required>
+        </div>
+        <div class="form-group">
+            <label for="first_name_update">First Name:</label>
+            <input type="text" id="first_name_update" name="first_name_update">
+        </div>
+        <div class="form-group">
+            <label for="last_name_update">Last Name:</label>
+            <input type="text" id="last_name_update" name="last_name_update">
+        </div>
+        <div class="form-group">
+            <label for="quantity_update">Quantity:</label>
+            <input type="text" id="quantity_update" name="quantity_update">
+        </div>
+        <div class="form-group">
+            <label for="phone_number_update">Phone Number:</label>
+            <input type="tel" id="phone_number_update" name="phone_number_update">
+        </div>
+        <div class="form-group">
+            <label for="email_update">Email:</label>
+            <input type="email" id="email_update" name="email_update">
+        </div>
+        <input type="submit" value="Update">
+        <input type="reset" value="Clear">
+    </form>
+
+    <h2>Delete Supplier</h2>
+    <form action="delete_supplier.php" method="post">
+        <div class="form-group">
+            <label for="supplier_id_delete">Supplier ID:</label>
+            <input type="text" id="supplier_id_delete" name="supplier_id_delete" required>
+        </div>
+        <input type="submit" value="Delete">
+        <input type="reset" value="Clear">
+    </form>
+</div>
+
+</body>
+</html>

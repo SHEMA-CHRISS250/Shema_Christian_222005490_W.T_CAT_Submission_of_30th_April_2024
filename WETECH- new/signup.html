@@ -1,0 +1,92 @@
+<!--Shema_Christian_222005490-->
+<!--Group One-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <style>
+        /* Add your CSS styles here */
+        
+         body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('images/barber.jpg'); /* Adjust path to the image */
+    background-size: cover;
+    background-position: center;
+           }
+
+        form {
+            background-color: #ffffff;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 400px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        input[type="submit"]:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <form action="signup.php" method="post">
+        <label for="full_name">Full Name:</label>
+        <input type="text" id="full_name" name="full_name" required>
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phone_number">Phone Number:</label>
+        <input type="text" id="phone_number" name="phone_number" required>
+
+        <label for="address">Address:</label>
+        <input type="text" id="address" name="address" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+
+        <input type="submit" value="Sign Up">
+        <p>Already have an account? <a href="signin.html">Sign In</a></p>
+    </form>
+
+    <script>
+        // Check if the URL contains a success parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        const success = urlParams.get('success');
+        
+        // If success parameter exists and is true, display success message
+        if (success === 'true') {
+            alert('Sign up successful!'); // Display pop-up message
+        }
+    </script>
+</body>
+</html>
+<!--Shema_Christian_222005490-->
+<!--Group One-->

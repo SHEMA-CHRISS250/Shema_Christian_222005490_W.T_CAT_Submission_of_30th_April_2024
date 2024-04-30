@@ -1,0 +1,95 @@
+<!--Shema_Christian_222005490-->
+<!--Group One-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Form</title>
+    <style>
+        /* Add your CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('images/cool.jpeg'); /* Set background image */
+            background-size: cover;
+            background-position: center;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        form {
+            background-color: rgba(255, 255, 255, 0.8); /* Transparent white background */
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Box shadow for form */
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        input[type="text"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        textarea {
+            height: 100px;
+        }
+        .submit-button,
+        .clear-button,
+        .back-button {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-right: 10px; /* Add margin between buttons */
+        }
+        .submit-button:hover,
+        .clear-button:hover,
+        .back-button:hover {
+            background-color: #555;
+        }
+        .back-button {
+            background-color: #777;
+            width: auto; /* Adjust width automatically */
+            font-size: 14px; /* Reduce font size */
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form action="serviceForm.php" method="post"> <!-- Specify the action and method -->
+            <h2>Service Form</h2>
+            
+            <label for="serviceName">Service Name:</label>
+            <input type="text" id="serviceName" name="servicename" required placeholder="Haircut, Shave, Beard Trim, etc.">
+
+            <label for="description">Description:</label>
+            <textarea id="description" name="description" required placeholder="Describe the service here, e.g., 'Includes haircut and styling'"></textarea>
+
+            <label for="price">Price:</label>
+            <input type="text" id="price" name="price" required placeholder="Enter the price, e.g., 25.00">
+
+            <input type="submit" class="submit-button" value="Submit">
+            <input type="reset" class="clear-button" value="Clear">
+        </form>
+        <div class="back-button" onclick="window.location.href='index.html'">Back</div>
+    </div>
+</body>
+</html>
+<!--Shema_Christian_222005490-->
+<!--Group One-->
+
